@@ -36,7 +36,7 @@ if [ "$SSL" == "true" ]; then
     echo "$SSL_CONFIG" >> /etc/mosquitto.conf
 fi
 
-# Add ssl configs
+# Add websocket configs
 if [ "$WEBSOCKETS" == "true" ]; then
     echo "$WEBSOCKET_CONFIG" >> /etc/mosquitto.conf
 fi
