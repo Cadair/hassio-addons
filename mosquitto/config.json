@@ -14,6 +14,7 @@
   "options": {
     "plain": true,
     "ssl": false,
+    "websockets": false,
     "anonymous": true,
     "logins": [],
     "certfile": "fullchain.pem",
