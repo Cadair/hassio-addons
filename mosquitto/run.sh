@@ -14,6 +14,11 @@ PLAIN_CONFIG="
 listener 1883
 "
 
+WEBSOCKET_CONFIG="
+listener 9001
+protocol websockets
+"
+
 SSL_CONFIG="
 listener 8883
 cafile /ssl/$CERTFILE
@@ -29,6 +34,11 @@ fi
 # Add ssl configs
 if [ "$SSL" == "true" ]; then
     echo "$SSL_CONFIG" >> /etc/mosquitto.conf
+fi
+
+# Add ssl configs
+if [ "$WEBSOCKETS" == "true" ]; then
+    echo "$WEBSOCKET_CONFIG" >> /etc/mosquitto.conf
 fi
 
 # Allow anonymous connections
